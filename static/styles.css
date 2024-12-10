@@ -1,0 +1,152 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    /* Adiciona um espaçamento mínimo no topo para evitar sobreposição com o header fixo */
+    padding-top: 70px;  
+}
+
+h1, h2 {
+    color: #007bff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos gerais para containers */
+.container-fluid, .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Estilos para notificações */
+.notification {
+    margin: 10px 0;
+}
+
+/* Estilos para barra de progresso */
+.progress {
+    height: 20px;
+}
+
+/* Estilos para labels de formulários */
+.form-group label {
+    font-size: 1.1rem;
+}
+
+/* Estilos para itens de lista */
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Estilos para o formulário TTS */
+#ttsForm {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Estilos para botões primários */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Estilos para os cards de funcionalidades */
+.card {
+    border: none; 
+    transition: transform 0.3s; /* Adiciona uma transição suave */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Faz o card "subir" ao passar o mouse */
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px; 
+}
+
+header .nav-links { 
+    display: flex;
+    align-items: center;
+}
+
+header .nav-links a {
+    color: #333;
+    margin-left: 20px; /* Espaçamento entre os links */
+}
+
+/* Estilos da seção de apresentação */
+.jumbotron {
+    background-color: #e9ecef;
+    padding: 4rem 2rem;
+    border-radius: 0.3rem;
+    text-align: center; /* Centraliza o conteúdo do jumbotron */
+}
+
+.jumbotron h1 {
+    color: #212529;
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Media queries para telas menores */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    #ttsForm {
+        padding: 10px;
+    }
+
+    header .nav-links {
+        display: flex; /* Garante que os links fiquem lado a lado */
+        flex-wrap: wrap; /* Permite que os links quebrem em várias linhas */
+        justify-content: center; /* Centraliza os links horizontalmente */
+    }
+
+    header .nav-links a {
+        margin: 0.5rem; /* Adiciona uma margem a todos os lados dos links */
+    }
+}
+
+@media (min-width: 768px) {
+    .display-5 {
+        font-size: 2rem;
+    }
+}
