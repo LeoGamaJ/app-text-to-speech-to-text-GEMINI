@@ -1,0 +1,40 @@
+<speak>
+    <p>
+        Olá! Hoje vamos conversar sobre <emphasis level="moderate">inteligência artificial</emphasis>, 
+        ou simplesmente IA.
+    </p>
+    <p>
+        A inteligência artificial é a capacidade de máquinas realizarem tarefas que, normalmente, 
+        requerem a <emphasis level="strong">inteligência humana</emphasis>.
+    </p>
+    <p>
+        Por exemplo, reconhecer rostos em fotos, entender o que dizemos 
+        ou até nos ajudar a tomar decisões importantes.
+    </p>
+    <p>
+        <prosody pitch="+5%">Mas como isso funciona?</prosody> A IA aprende com dados, analisando padrões 
+        e ajustando seu comportamento com o tempo.
+    </p>
+    <p>
+        Hoje, ela já está presente em várias áreas, como saúde, transporte, e até no nosso dia a dia, 
+        com assistentes virtuais.
+    </p>
+    <p>
+        <prosody rate="medium">Existem diferentes tipos de IA.</prosody> Uma delas é o aprendizado de máquina, 
+        onde computadores aprendem sozinhos com exemplos.
+    </p>
+    <p>
+        Outro exemplo são as redes neurais, inspiradas no funcionamento do cérebro humano.
+    </p>
+    <p>
+        <break time="500ms"/> Apesar de suas vantagens, a IA também nos faz refletir sobre ética, 
+        privacidade e o impacto no mercado de trabalho.
+    </p>
+    <p>
+        <prosody pitch="-2%">No fim das contas,</prosody> a inteligência artificial é uma ferramenta poderosa, 
+        que precisa ser usada com responsabilidade.
+    </p>
+    <p>
+        E então, o que você acha do futuro da IA? <break time="700ms"/> Obrigado por me ouvir!
+    </p>
+</speak>

@@ -1,0 +1,64 @@
+2024-10-05 23:07:15,258 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-05 23:07:15,258 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-05 23:07:15,259 - INFO -  * Restarting with stat
+2024-10-05 23:07:15,592 - WARNING -  * Debugger is active!
+2024-10-05 23:07:15,592 - INFO -  * Debugger PIN: 538-982-767
+2024-10-05 23:07:17,559 - INFO - 127.0.0.1 - - [05/Oct/2024 23:07:17] "GET / HTTP/1.1" 200 -
+2024-10-05 23:07:17,607 - INFO - 127.0.0.1 - - [05/Oct/2024 23:07:17] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2024-10-05 23:07:17,607 - INFO - 127.0.0.1 - - [05/Oct/2024 23:07:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-10-05 23:12:22,892 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-05 23:12:22,893 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-05 23:12:22,893 - INFO -  * Restarting with stat
+2024-10-05 23:12:23,216 - WARNING -  * Debugger is active!
+2024-10-05 23:12:23,217 - INFO -  * Debugger PIN: 538-982-767
+2024-10-05 23:12:24,997 - INFO - 127.0.0.1 - - [05/Oct/2024 23:12:24] "GET / HTTP/1.1" 200 -
+2024-10-05 23:12:25,050 - INFO - 127.0.0.1 - - [05/Oct/2024 23:12:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-10-05 23:12:25,050 - INFO - 127.0.0.1 - - [05/Oct/2024 23:12:25] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2024-10-05 23:18:39,885 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-05 23:18:39,885 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-05 23:18:39,886 - INFO -  * Restarting with stat
+2024-10-05 23:18:40,198 - WARNING -  * Debugger is active!
+2024-10-05 23:18:40,199 - INFO -  * Debugger PIN: 538-982-767
+2024-10-05 23:18:42,170 - INFO - 127.0.0.1 - - [05/Oct/2024 23:18:42] "GET / HTTP/1.1" 200 -
+2024-10-05 23:18:42,216 - INFO - 127.0.0.1 - - [05/Oct/2024 23:18:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-10-05 23:18:42,220 - INFO - 127.0.0.1 - - [05/Oct/2024 23:18:42] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2024-10-05 23:23:35,372 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-05 23:23:35,372 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-05 23:23:35,373 - INFO -  * Restarting with stat
+2024-10-05 23:23:35,686 - WARNING -  * Debugger is active!
+2024-10-05 23:23:35,687 - INFO -  * Debugger PIN: 538-982-767
+2024-10-05 23:23:37,242 - INFO - 127.0.0.1 - - [05/Oct/2024 23:23:37] "GET / HTTP/1.1" 200 -
+2024-10-05 23:23:37,291 - INFO - 127.0.0.1 - - [05/Oct/2024 23:23:37] "GET /static/script.js HTTP/1.1" 200 -
+2024-10-05 23:23:37,291 - INFO - 127.0.0.1 - - [05/Oct/2024 23:23:37] "GET /static/style.css HTTP/1.1" 200 -
+2024-10-05 23:25:22,915 - INFO - 127.0.0.1 - - [05/Oct/2024 23:25:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-10-05 23:27:56,183 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-05 23:27:56,184 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-05 23:27:56,184 - INFO -  * Restarting with stat
+2024-10-05 23:27:56,502 - WARNING -  * Debugger is active!
+2024-10-05 23:27:56,503 - INFO -  * Debugger PIN: 538-982-767
+2024-10-05 23:27:59,604 - INFO - 127.0.0.1 - - [05/Oct/2024 23:27:59] "GET / HTTP/1.1" 200 -
+2024-10-05 23:27:59,658 - INFO - 127.0.0.1 - - [05/Oct/2024 23:27:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-10-05 23:27:59,658 - INFO - 127.0.0.1 - - [05/Oct/2024 23:27:59] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2024-10-05 23:31:50,080 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-05 23:31:50,080 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-05 23:31:50,081 - INFO -  * Restarting with stat
+2024-10-05 23:31:50,428 - WARNING -  * Debugger is active!
+2024-10-05 23:31:50,428 - INFO -  * Debugger PIN: 538-982-767
+2024-10-05 23:31:54,282 - INFO - 127.0.0.1 - - [05/Oct/2024 23:31:54] "GET / HTTP/1.1" 200 -
+2024-10-05 23:31:54,329 - INFO - 127.0.0.1 - - [05/Oct/2024 23:31:54] "GET /static/style.css HTTP/1.1" 200 -
+2024-10-05 23:31:54,330 - INFO - 127.0.0.1 - - [05/Oct/2024 23:31:54] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2024-10-05 23:32:48,633 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-05 23:32:48,633 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-05 23:32:48,634 - INFO -  * Restarting with stat
+2024-10-05 23:32:48,954 - WARNING -  * Debugger is active!
+2024-10-05 23:32:48,954 - INFO -  * Debugger PIN: 538-982-767
+2024-10-05 23:32:50,310 - INFO - 127.0.0.1 - - [05/Oct/2024 23:32:50] "GET / HTTP/1.1" 200 -
+2024-10-05 23:32:50,359 - INFO - 127.0.0.1 - - [05/Oct/2024 23:32:50] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2024-10-05 23:32:50,359 - INFO - 127.0.0.1 - - [05/Oct/2024 23:32:50] "GET /static/style.css HTTP/1.1" 200 -
