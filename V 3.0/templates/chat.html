@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Chat Inteligente | leogama.cloud</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <i class="fas fa-wave-square text-primary me-2"></i>
+                <span class="fw-bold">leogama.cloud</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index_tts.html">Text-to-Speech</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index_stt.html">Speech-to-Text</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/chat">Chat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">Sobre</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5 pt-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center mb-5">
+                <h1 class="display-4 fw-bold mb-4">Chat Inteligente</h1>
+                <p class="lead text-muted">Converse com nossa IA avançada usando o Gemini</p>
+            </div>
+        </div>
+
+        <!-- Notificações -->
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div id="notification" class="alert" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- Configurações -->
+        <div class="row mb-4">
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="modelSelect" class="form-label">Modelo</label>
+                                    <select class="form-select" id="modelSelect">
+                                        <option value="gemini-1.5-pro">Gemini Pro</option>
+                                        <option value="gemini-1.5-flash">Gemini Flash</option>
+                                        <option value="gemini-1.5-flash-8b">Gemini Flash 8B</option>
+                                        <option value="gemini-2.0-flash-exp">Gemini Flash Exp</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="temperatureRange" class="form-label">Temperatura: <span id="temperatureValue">0.7</span></label>
+                                    <input type="range" class="form-range" id="temperatureRange" min="0" max="1.9" step="0.1" value="0.7">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-check form-switch mt-4">
+                                    <input class="form-check-input" type="checkbox" id="imageMode">
+                                    <label class="form-check-label" for="imageMode">Modo Imagem</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Container -->
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <!-- Botões de Ação do Chat -->
+                <div class="d-flex justify-content-end mb-3">
+                    <button class="btn btn-outline-primary me-2" onclick="exportChat('txt')" title="Exportar como TXT">
+                        <i class="fas fa-file-alt me-2"></i>TXT
+                    </button>
+                    <button class="btn btn-outline-primary me-2" onclick="exportChat('md')" title="Exportar como Markdown">
+                        <i class="fas fa-file-code me-2"></i>MD
+                    </button>
+                    <button class="btn btn-outline-danger" onclick="clearChat()" title="Limpar Chat">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+
+                <div class="card shadow-sm chat-container">
+                    <div class="card-body">
+                        <!-- Área de Mensagens -->
+                        <div class="chat-messages" id="chatMessages">
+                            <!-- As mensagens serão inseridas aqui via JavaScript -->
+                        </div>
+
+                        <!-- Área de Upload de Imagem (inicialmente oculta) -->
+                        <div id="imageUploadArea" class="p-3 border-top" style="display: none;">
+                            <div class="d-flex align-items-center">
+                                <input type="file" class="form-control" id="imageInput" accept="image/*">
+                                <button class="btn btn-outline-danger ms-2" id="removeImage">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div id="imagePreview" class="mt-2"></div>
+                        </div>
+
+                        <!-- Área de Input -->
+                        <div class="chat-input-area">
+                            <div class="input-group">
+                                <textarea class="form-control" id="messageInput" rows="1" placeholder="Digite sua mensagem..." style="resize: none; max-height: 100px; overflow-y: auto;"></textarea>
+                                <button class="btn btn-primary" id="sendMessage">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-start">
+                        <i class="fas fa-wave-square text-primary me-2"></i>
+                        <span class="fw-bold">leogama.cloud</span>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-4 mt-md-0">
+                    <div class="social-links mb-3">
+                        <a href="https://www.linkedin.com/in/leonardo-gama-jardim/" target="_blank" class="me-3">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/LeoGamaJ" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <p class="mb-0">⚡ Developed by Leo Gama - 2024</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Carregamento -->
+    <div id="loadingModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold">Processando sua solicitação</h5>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Carregando...</span>
+                    </div>
+                    <p class="mt-3 mb-0">Aguarde enquanto processamos sua mensagem...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
