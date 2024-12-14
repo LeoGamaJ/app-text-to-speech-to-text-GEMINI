@@ -3,6 +3,7 @@
 A modern web application that integrates advanced AI technologies to transform how people interact with digital content. Combining the power of Google Cloud Platform with an intuitive interface, we offer voice and text conversion capabilities, plus intelligent interactions through Gemini Pro.
 
 ![Home Page](./assets/home.png)
+![Home Page](./assets/home2.png)
 
 ## ✨ Features
 
