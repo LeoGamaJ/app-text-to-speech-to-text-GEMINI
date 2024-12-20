@@ -13,7 +13,7 @@ Convert audio to text with high accuracy using Google Cloud Speech-to-Text v1p1b
 - Conversion history
 - Intuitive interface
 
-![STT Page](./assets/stt.png)
+![STT Page](./assets/stt2.png)
 
 ### 🔊 Text-to-Speech
 Transform text into natural audio using Google Cloud Text-to-Speech Wavenet voice.
@@ -22,7 +22,7 @@ Transform text into natural audio using Google Cloud Text-to-Speech Wavenet voic
 - Asynchronous processing for long texts
 - Conversion history
 
-![TTS Page](./assets/tts.png)
+![TTS Page](./assets/tts2.png)
 
 ### 🤖 Intelligent Chat
 Interact with Gemini Pro 1.5 through a friendly interface.
@@ -31,7 +31,7 @@ Interact with Gemini Pro 1.5 through a friendly interface.
 - Modern chat interface
 - Conversation history
 
-![Chat Page](./assets/chat.png)
+![Chat Page](./assets/chat2.png)
 
 ## 🛠️ Technology Stack
 
